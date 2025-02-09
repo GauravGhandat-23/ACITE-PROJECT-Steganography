@@ -1,18 +1,15 @@
 # 📷 Image Steganography using OpenCV and Python 📷
 
 ## 📝 Description
-This project allows users to hide a secret message inside an image using image steganography techniques. The message is encrypted within the image pixels, secured with a SHA-256 hashed password, and can only be retrieved with the correct passcode.
+The Image-Based Steganography Tool is a Python-powered application that enables users to securely hide messages within images using AES encryption and LSB (Least Significant Bit) steganography. The tool provides both encoding and decoding functionality through an intuitive Streamlit-based UI.
 
 ## ⭐ Features
-- Hide secret messages inside images securely.
-- Encrypt messages with a SHA-256 hashed password.
-- Extract and decrypt messages using the correct passcode.
-- Supports PNG image format for lossless storage.
 
-## 📌 Requirements
-- Python 3.x
-- OpenCV (`cv2` module)
-- `hashlib` (built-in Python module)
+- 🔐 **AES Encryption**: Encrypts messages using AES-CBC mode before embedding them in images.
+- 🖼️ **LSB Steganography**: Hides encrypted messages in images at the pixel level.
+- 📤 **Image Upload & Download**: Allows users to upload images, encode/decode messages, and download encrypted images.
+- 🛠 **User-Friendly Interface**: Built with Streamlit for a seamless experience.
+
 
 ## 📥 Installation
 1. Clone this repository:
@@ -22,54 +19,59 @@ This project allows users to hide a secret message inside an image using image s
    ```
 2. Install required dependencies:
    ```sh
-   pip install opencv-python
+   pip install streamlit opencv-python numpy pycryptodome
    ```
-
-## 🛠 Usage
-### 🔏 Encoding a Message
-1. Place the image (`image.png`) in the same directory as the script.
-2. Run the script:
+3. Run the Application
    ```sh
-   python stego.py
+   streamlit run stego.py
    ```
-3. Enter the secret message and a password when prompted.
-4. The encrypted message will be saved in `encryptedImage.png`.
+   
+## 🛠 Usage
+## 🔵 Encoding a Message
 
-### 🔓 Decoding a Message
+1. Upload a PNG image.
+2. Enter your secret message.
+3. Provide a passcode (used for encryption & decryption).
+4. Click Encode & Save Image.
+5. Download the newly encrypted image.
 
-1. Enter the password for decryption.
-2. If the password matches, the hidden message will be displayed.
+### 🟢 Decoding a Message
 
-## 💻 Code Explanation
-### `hash_password(password)`
-Hashes the password using SHA-256 to enhance security.
+1. Upload an encrypted image.
+2. Enter the correct passcode.
+3. Click Decode Message.
+4. View the decrypted message.
 
-### `encode_message(img_path, msg, password)`
-- Reads the image and verifies its existence.
-- Hashes the password and appends it to the message.
-- Encodes the message into the image pixels.
-- Saves the modified image as `encryptedImage.png`.
+## 📸 Screenshots
 
-### `decode_message(img_path, password)`
-- Reads the encrypted image.
-- Extracts the hidden message from the pixels.
-- Verifies the stored hash against the user-provided password.
-- Displays the secret message if authentication is successful.
+## Encode Message
 
-## 📖 Example
-```sh
-Enter secret message: Hello, this is a secret!
-Enter passcode: mySecurePassword123
-Message encrypted successfully in 'encryptedImage.png'!
+![encoded example](https://github.com/user-attachments/assets/36eacc75-acf5-4d70-b5f1-24f70589dc59)
 
-Enter passcode for Decryption: mySecurePassword123
-Decrypted message: Hello, this is a secret!
-```
+## Decode Message
 
-## ⚠️ Notes
-- The message length is limited by the image size.
-- Ensure that the image used is a PNG to prevent data loss.
-- If the incorrect password is provided, authentication will fail.
+![image](https://github.com/user-attachments/assets/e54e22aa-afcb-41b5-a1f0-e6116f33a867)
+
+
+### 🛡️ Security Considerations
+
+- AES encryption ensures strong message protection.
+- Messages are not retrievable without the correct passcode.
+- Ensure images are stored securely to prevent unauthorized access.
+
+### 👨‍💻 Technologies Used
+
+- Python 🐍
+
+- Streamlit 📊
+
+- penCV 📷
+
+- PyCryptodome 🔐
+
+### 🤝 Contributing
+
+- Contributions are welcome! Feel free to fork this repository and submit a pull request.
 
 ## 🌐 Connect with Me 
 

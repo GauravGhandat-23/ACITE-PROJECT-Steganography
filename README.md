@@ -1,4 +1,4 @@
-# 📷 SECURE DATA HIDING IN IMAGES USING STEGANOGRAPHY 📷
+<h1 align="center"> 📷 SECURE DATA HIDING IN IMAGES USING STEGANOGRAPHY 📷 </h1>
 
 ![image](https://github.com/user-attachments/assets/0cf47d73-05cb-4395-bdc8-651e96b7d403)
 

@@ -16,8 +16,8 @@ The Image-Based Steganography Tool is a Python-powered application that enables 
 ## 📥 Installation
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-username/Steganography.git
-   cd Steganography
+   git clone https://github.com/your-username/ACITE-PROJECT-Steganography.git
+   cd ACITE-PROJECT-Steganography.git
    ```
 2. Install required dependencies:
    ```sh
